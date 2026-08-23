@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Coding Club</title>
+
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+            background: #f2f2f2;
+            margin: 0;
+            padding: 30px;
+        }
+
+        h1 {
+            color: #673ab7;
+        }
+
+        .container {
+            background: white;
+            max-width: 500px;
+            margin: auto;
+            padding: 25px;
+            border-radius: 15px;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.2);
+        }
+
+        button {
+            display: block;
+            width: 100%;
+            padding: 15px;
+            margin: 15px 0;
+            border: none;
+            border-radius: 10px;
+            font-size: 18px;
+            color: white;
+            background: #673ab7;
+            cursor: pointer;
+        }
+
+        button:hover {
+            background: #512da8;
+        }
+
+        #poster {
+            display: none;
+            width: 100%;
+            margin-top: 20px;
+            border-radius: 10px;
+        }
+
+        a {
+            text-decoration: none;
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="container">
+
+        <h1>💻 Coding Club</h1>
+
+        <p>Welcome to the Coding Club Event!</p>
+
+        <button onclick="showPoster()">
+            👁️ See Poster
+        </button>
+
+        <button onclick="startPuzzle()">
+            🧩 Play Puzzle
+        </button>
+
+        <a href="https://forms.gle/kTokFmUj2osTioBCA" target="_blank">
+            <button>
+                📝 Register for Event
+            </button>
+        </a>
+
+        <img id="poster" src="poster.jpg" alt="Event Poster">
+
+        <p id="message"></p>
+
+    </div>
+
+    <script>
+
+        function showPoster() {
+            document.getElementById("poster").style.display = "block";
+            document.getElementById("message").innerHTML =
+                "🎉 Here is the event poster!";
+        }
+
+        function startPuzzle() {
+            document.getElementById("message").innerHTML =
+                "🧩 Puzzle will start here!";
+        }
+
+    </script>
+
+</body>
+</html>
